@@ -1,6 +1,5 @@
 package com.hackbulgaria.corejava;
 
-import java.lang.Thread.State;
 
 public class FaultyProblem7 {
     public static int binarySearch(int element, int... array) {
@@ -11,7 +10,7 @@ public class FaultyProblem7 {
 
         int mid = (low + high) / 2;
         while (high - low > 1) {
-
+            mid = (low + high) / 2;
             if (element == array[mid]) {
                 return mid;
             }
@@ -26,7 +25,6 @@ public class FaultyProblem7 {
             return high;
         if (array[low] == element)
             return low;
-
         return -1; // not found
     }
 }
